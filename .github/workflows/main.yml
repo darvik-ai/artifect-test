@@ -1,0 +1,17 @@
+name: Build and Upload Artifacts
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts  # Descriptive name
+          path: /*  # Replace with your build output directory
+          if-success: true  # Upload only on successful builds
