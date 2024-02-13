@@ -13,5 +13,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts  # Descriptive name
-          path: /*  # Replace with your build output directory
+          path: ./*  # Replace with your build output directory
           retention-days: 7 
