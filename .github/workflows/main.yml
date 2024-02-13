@@ -14,4 +14,4 @@ jobs:
         with:
           name: build-artifacts  # Descriptive name
           path: /*  # Replace with your build output directory
-          if-success: true  # Upload only on successful builds
+          retention-days: 7 
