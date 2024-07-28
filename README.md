@@ -2,12 +2,11 @@
 
 To run Ansible commands or playbooks, follow these general steps:
 
-1. **Setup Inventory**: Create an inventory file (e.g., `inventory.ini`) that lists the target hosts. For example:
+1. **Setup Inventory**: Create an inventory file (e.g., `inventory.ini`) that lists the target hosts. For example (EC2):
 
    ```ini
-   [webservers]
-   server1 ansible_host=192.168.1.10
-   server2 ansible_host=192.168.1.11
+   [ec2]
+   13.234.119.254 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=./server.pem
    ```
 
 2. **Run a Command**: Use the `ansible` command to execute ad-hoc commands. For example, to ping all hosts in the inventory:
