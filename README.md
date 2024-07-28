@@ -13,7 +13,7 @@ Application API endpoints:
 
 - **Create a new todo**:
   - URL: POST
-    ```http://localhost:5000/todos```
+    ```json http://localhost:5000/todos```
   - Body:
     ```json
     {
