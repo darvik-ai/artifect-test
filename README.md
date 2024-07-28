@@ -8,15 +8,17 @@ Here's a structured overview of the application API endpoints for managing users
 - **Method**: **POST**
 - **URL**: 
   ```
-  http://localhost:5000/users
+  http://localhost:3000/users
   ```
 - **Request Body**:
   ```json
   {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
+  "name": "Darvik AI",
+  "email": "eljfmso@example.com",
+  "username": "darvikso",
+  "password": "password123"
   }
+
   ```
 
 ### Todo Management
@@ -25,7 +27,7 @@ Here's a structured overview of the application API endpoints for managing users
 - **Method**: **POST**
 - **URL**: 
   ```
-  http://localhost:5000/todos
+  http://localhost:3000/todos
   ```
 - **Request Body**:
   ```json
@@ -41,21 +43,21 @@ Here's a structured overview of the application API endpoints for managing users
 - **Method**: **GET**
 - **URL**: 
   ```
-  http://localhost:5000/todos/:userId
+  http://localhost:3000/todos/:userId
   ```
 
 #### **Fetch a Specific Todo**
 - **Method**: **GET**
 - **URL**: 
   ```
-  http://localhost:5000/todos/:userId/:todoId
+  http://localhost:3000/todos/:userId/:todoId
   ```
 
 #### **Update a Todo**
 - **Method**: **PUT**
 - **URL**: 
   ```
-  http://localhost:5000/todos/:userId/:todoId
+  http://localhost:3000/todos/:userId/:todoId
   ```
 - **Request Body** (only include the fields you want to update):
   ```json
@@ -69,5 +71,5 @@ Here's a structured overview of the application API endpoints for managing users
 - **Method**: **DELETE**
 - **URL**: 
   ```
-  http://localhost:5000/todos/:userId/:todoId
+  http://localhost:3000/todos/:userId/:todoId
   ```
