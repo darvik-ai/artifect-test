@@ -1,45 +1,68 @@
-Application API endpoints:
+Here's a structured overview of the application API endpoints for managing users and todos, formatted for clarity and ease of use.
 
-- **Create a new user**:
-  - URL: `POST http://localhost:5000/users`
-  - Body:
-    ```json
-    {
-      "name": "John Doe",
-      "email": "john@example.com",
-      "password": "password123"
-    }
-    ```
+## API Endpoints Overview
 
-- **Create a new todo**:
-  - URL: `POST http://localhost:5000/todos`
-  - Body:
-    ```json
-    {
-      "userId": "User's ObjectId",
-      "title": "Sample Todo",
-      "description": "This is a sample todo item",
-      "completed": false
-    }
-    ```
+### User Management
 
-- **Fetch all todos for a specific user**:
-  - URL: `GET http://localhost:5000/todos/:userId`
+#### Create a New User
+- **URL**: 
+  ```
+  POST http://localhost:5000/users
+  ```
+- **Request Body**:
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "password123"
+  }
+  ```
 
-- **Fetch a specific todo**:
-  - URL: `GET http://localhost:5000/todos/:userId/:todoId`
+### Todo Management
 
-- **Update a todo**:
-  - URL: `PUT http://localhost:5000/todos/:userId/:todoId`
-  - Body: (only include the fields you want to update)
-    ```json
-    {
-      "title": "Updated Todo",
-      "completed": true
-    }
-    ```
+#### Create a New Todo
+- **URL**: 
+  ```
+  POST http://localhost:5000/todos
+  ```
+- **Request Body**:
+  ```json
+  {
+    "userId": "User's ObjectId",
+    "title": "Sample Todo",
+    "description": "This is a sample todo item",
+    "completed": false
+  }
+  ```
 
-- **Delete a todo**:
-  - URL: `DELETE http://localhost:5000/todos/:userId/:todoId`
+#### Fetch All Todos for a Specific User
+- **URL**: 
+  ```
+  GET http://localhost:5000/todos/:userId
+  ```
 
-This is a basic setup. You can expand it by adding more features, validation, authentication, etc.
+#### Fetch a Specific Todo
+- **URL**: 
+  ```
+  GET http://localhost:5000/todos/:userId/:todoId
+  ```
+
+#### Update a Todo
+- **URL**: 
+  ```
+  PUT http://localhost:5000/todos/:userId/:todoId
+  ```
+- **Request Body** (only include the fields you want to update):
+  ```json
+  {
+    "title": "Updated Todo",
+    "completed": true
+  }
+  ```
+
+#### Delete a Todo
+- **URL**: 
+  ```
+  DELETE http://localhost:5000/todos/:userId/:todoId
+  ```
+
