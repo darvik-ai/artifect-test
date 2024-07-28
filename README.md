@@ -21,6 +21,12 @@ Here's a structured overview of the application API endpoints for managing users
 
   ```
 
+#### **Delete Existing User**
+- **Method**: **DELETE**
+- **URL**: 
+  ```
+  http://localhost:3000/users/:userId
+  ```
 ### Todo Management
 
 #### **Create a New Todo**
